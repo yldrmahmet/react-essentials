@@ -1,6 +1,5 @@
 import Header from "./components/Header/Header";
-import CoreConcepts from "./components/CoreConcept/CoreConcepts";
-import Examples from "./components/Examples";
+import Section from "./components/Section";
 
 function App() {
   console.log("app rendered");
@@ -9,8 +8,8 @@ function App() {
     <>
       <Header />
       <main>
-        <CoreConcepts />
-        <Examples />
+        <Section title="Time to get started!" id="core-concepts" />
+        <Section title="Examples" id="examples" />
       </main>
     </>
   );
