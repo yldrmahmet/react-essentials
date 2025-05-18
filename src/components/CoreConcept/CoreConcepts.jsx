@@ -6,7 +6,7 @@ export default function CoreConcepts() {
     <section id="core-concepts">
       <h2>Time to get started!</h2>
       <ul>
-        {CORE_CONCEPTS.map((conceptItem, key) => (
+        {CORE_CONCEPTS.map((conceptItem) => (
           <CoreConcept
             title={conceptItem.title}
             description={conceptItem.description}
