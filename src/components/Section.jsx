@@ -1,12 +1,13 @@
-import CoreConcepts from "./CoreConcept/CoreConcepts";
-import Examples from "./Examples";
-
-export default function Section({ title, id }) {
+export default function Section({ children, title, ...props }) {
   return (
-    <section id={id}>
+    // ...props -> spread operator
+    // spread operator -> props nesnesindeki tüm özellikleri alır
+    // ve bu özellikleri <section> etiketine ekler
+    // spread operator -> props object takes all properties of the object
+    // and adds them to the <section> tag
+    <section {...props}>
       <h2>{title}</h2>
-      {id === "core-concepts" && <CoreConcepts />}
-      {id === "examples" && <Examples />}
+      {children}
     </section>
   );
 }
